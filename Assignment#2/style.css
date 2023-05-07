@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(white, pink);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    width: 100%;
+}
+
+nav{
+    flex: 1;
+    text-align: right;   
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+p{
+    color: #555;
+}
+
+.container{
+    width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow-x: hidden;
+}
+
+.row{
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.column-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.column-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.column-2 h1{
+    font-size: 50px;
+    line-height: 62px;
+    margin: 25px 0;
+}
+
+.button{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.button:hover{
+    background: #563434;
+}
+
+.categories{
+    margin: 70px 0;
+}
+
+.column-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.column-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+  
+.submit-button {
+	margin-top: 20px;
+	width: 280px;
+}
+.game-area {
+	margin:0 auto;
+	text-align: center;
+	padding-top: 20px; 
+}
+
+.game-options {
+	border-bottom: 1px dashed #CFCFCF;
+	padding-bottom: 20px;
+}
+.game-options select, .game-options input  {
+	border: 1px solid #333;
+	padding: 10px;
+	margin-right: 10px;
+	outline: none;
+}
+.game-board {
+	margin-top: 50px;
+	padding: 10px;
+}
+
+.grid-box, .green-player, .red-player {
+	font-size: 35px;
+	padding: 15px 25px;
+	width: 80px;
+	height: 80px;
+	margin:0px;
+	background-color: #FCFCFC;
+	outline: none;
+}
+.green-player {
+	background-color: green;
+	color: #FFF;
+}
+.red-player {
+	background-color: red;
+	color: #FFF;
+}
+
+.score-card {
+	font-weight: bold;
+	line-height: 25px;
+}
+.score-card span {
+	font-weight: normal;
+}
+
+.column{
+    width:100%;
+}
+
+.slide-left{
+    animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+.ugh{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animate{
+    0%{
+        background-image: url(Readingglasses.jpeg) ;
+    }
+    25%{
+        background-image: url(sunglasses.jpg) ;
+    }
+    50%{
+        background-image: url(sports\ glasses.jpeg);
+    }
+    75%{
+        background-image: url(monocle.jpeg) ;
+    }
+    100%{
+        background-image: url(foldable\ glasses.webp) ;
+    }
+}
+
+#preloader{
+    background: #000 url(load.gif) no-repeat center center;
+    background-size: 5%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.fly img{
+    width:50px;
+    animation: fly 7s linear infinite;
+}
+
+.fly{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes fly{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+.fly img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.fly img:nth-child(2){
+    animation-delay: 1s;
+}
+.fly img:nth-child(3){
+    animation-delay: 3s;
+    width: 35px;
+}
+.fly img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 20px;
+}
+.fly img:nth-child(5){
+    animation-delay: 7s;
+    width: 40px;
+}
+.fly img:nth-child(6){
+    animation-delay: 6s;
+}
